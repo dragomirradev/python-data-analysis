@@ -11788,14 +11788,14 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="c1"># Some basic data</span>
 
-<span class="n">c</span> <span class="o">=</span> <span class="p">[</span>
+<span class="n">users</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">{</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">29</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">},</span>
     <span class="p">{</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Doe&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span> <span class="p">},</span>
     <span class="p">{</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Alex&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">3</span> <span class="p">},</span>
@@ -11804,7 +11804,7 @@ div#notebook {
     <span class="p">{</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Shristy&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">}</span>
 <span class="p">]</span>
 
-<span class="n">c</span>
+<span class="n">users</span>
 </pre></div>
 
 </div>
@@ -11817,7 +11817,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[29]:</div>
+<div class="prompt output_prompt">Out[1]:</div>
 
 
 
@@ -11839,11 +11839,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using the above data as Foreign Key (FK)</span>
-<span class="n">t</span> <span class="o">=</span> <span class="p">[</span>
+<span class="n">likes</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">{</span> <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;likes&#39;</span><span class="p">:</span> <span class="s1">&#39;Mango&#39;</span> <span class="p">},</span>
     <span class="p">{</span> <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;likes&#39;</span><span class="p">:</span> <span class="s1">&#39;Pepsi&#39;</span> <span class="p">},</span>
     <span class="p">{</span> <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;likes&#39;</span><span class="p">:</span> <span class="s1">&#39;Burger&#39;</span> <span class="p">},</span>
@@ -11857,7 +11857,7 @@ div#notebook {
     <span class="p">{</span> <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;likes&#39;</span><span class="p">:</span> <span class="s1">&#39;Pepsi&#39;</span> <span class="p">},</span>
 <span class="p">]</span>
 
-<span class="n">t</span>
+<span class="n">likes</span>
 </pre></div>
 
 </div>
@@ -11870,7 +11870,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[30]:</div>
+<div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -11897,14 +11897,14 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create Pandas DataFrame object and set</span>
 <span class="c1"># appropriate index</span>
-<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-<span class="n">df1</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
-<span class="n">df1</span>
+<span class="n">df_users</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">users</span><span class="p">)</span>
+<span class="n">df_users</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+<span class="n">df_users</span>
 </pre></div>
 
 </div>
@@ -11917,7 +11917,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[31]:</div>
+<div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -11995,12 +11995,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<span class="n">df2</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;user_id&#39;</span><span class="p">)</span>
-<span class="n">df2</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_likes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">likes</span><span class="p">)</span>
+<span class="n">df_likes</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;user_id&#39;</span><span class="p">)</span>
+<span class="n">df_likes</span>
 </pre></div>
 
 </div>
@@ -12013,7 +12013,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[32]:</div>
+<div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -12109,14 +12109,13 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using the FK relation to create a join</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;user_id&#39;</span><span class="p">)</span>
-<span class="n">m</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;user_id&#39;</span><span class="p">)</span>
-<span class="n">m</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;user_id&#39;</span><span class="p">)</span>
-<span class="n">m</span>
+<span class="n">users_likes_join</span> <span class="o">=</span> <span class="n">df_users</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_likes</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;user_id&#39;</span><span class="p">)</span>
+<span class="n">users_likes_join</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;user_id&#39;</span><span class="p">)</span>
+<span class="n">users_likes_join</span>
 </pre></div>
 
 </div>
@@ -12129,7 +12128,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[33]:</div>
+<div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -12261,13 +12260,13 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Changing left and right hand side of the relationship</span>
-<span class="n">m2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">df1</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;user_id&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
-<span class="n">m2</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;user_id&#39;</span><span class="p">)</span>
-<span class="n">m2</span>
+<span class="n">likes_users_join</span> <span class="o">=</span> <span class="n">df_likes</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_users</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;user_id&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+<span class="n">likes_users_join</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;user_id&#39;</span><span class="p">)</span>
+<span class="n">likes_users_join</span>
 </pre></div>
 
 </div>
@@ -12280,7 +12279,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[34]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -12420,12 +12419,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Food wise count of likes</span>
-<span class="n">m</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;likes&#39;</span><span class="p">)</span>
-<span class="n">food_wise</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;likes&#39;</span><span class="p">)[</span><span class="s1">&#39;likes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="n">food_wise</span> <span class="o">=</span> <span class="n">users_likes_join</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;likes&#39;</span><span class="p">)[</span><span class="s1">&#39;likes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 <span class="n">food_wise</span>
 </pre></div>
 
@@ -12439,7 +12437,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[35]:</div>
+<div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -12463,7 +12461,7 @@ Name: likes, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Lets sort our data. Default order is ascending</span>
@@ -12481,7 +12479,7 @@ Name: likes, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[36]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -12505,7 +12503,7 @@ Name: likes, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># An example for descending</span>
@@ -12523,7 +12521,7 @@ Name: likes, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[37]:</div>
+<div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -12557,7 +12555,7 @@ Name: likes, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using in_place sort for memory efficiency</span>
@@ -12578,7 +12576,7 @@ Name: likes, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[38]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -12612,7 +12610,7 @@ Name: likes, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -12642,13 +12640,13 @@ Name: likes, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[39]:</div>
+<div class="prompt output_prompt">Out[11]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x11426fc18&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x106f7bda0&gt;</pre>
 </div>
 
 </div>
@@ -12987,7 +12985,7 @@ ZTvVdBYLPAAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># A bar chart</span>
@@ -13004,13 +13002,13 @@ ZTvVdBYLPAAAAABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[40]:</div>
+<div class="prompt output_prompt">Out[12]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x114885a58&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x106fa4ef0&gt;</pre>
 </div>
 
 </div>
@@ -13194,7 +13192,7 @@ DvECABiHeAEAjEO8AADGIV4AAOMQLwCAcf4fDQv7mh1yANAAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Horizontal bar chart</span>
@@ -13211,13 +13209,13 @@ DvECABiHeAEAjEO8AADGIV4AAOMQLwCAcf4fDQv7mh1yANAAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[41]:</div>
+<div class="prompt output_prompt">Out[13]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x11491dba8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1070651d0&gt;</pre>
 </div>
 
 </div>
@@ -13388,14 +13386,14 @@ CgCAkf91WdKhAAAABUlEQVQDuMmVATalpmoAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Lets plot the most active users - those who hit like</span>
 <span class="c1"># very often using the above techniques</span>
 
 <span class="c1"># Get the users by number of likes they have</span>
-<span class="n">user_agg</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)[</span><span class="s1">&#39;likes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="n">user_agg</span> <span class="o">=</span> <span class="n">users_likes_join</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)[</span><span class="s1">&#39;likes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 
 <span class="c1"># Here we go: Our most active users in a different color</span>
 <span class="n">user_agg</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#10d3f6&#39;</span><span class="p">)</span>
@@ -13411,13 +13409,13 @@ CgCAkf91WdKhAAAABUlEQVQDuMmVATalpmoAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[42]:</div>
+<div class="prompt output_prompt">Out[14]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x11496dd30&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1071fe2e8&gt;</pre>
 </div>
 
 </div>
@@ -13572,11 +13570,11 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Users who never interact with our data</span>
-<span class="n">df1</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df1</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">])]</span>
+<span class="n">df_users</span><span class="p">[</span><span class="o">~</span><span class="n">df_users</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">df_likes</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">])]</span>
 </pre></div>
 
 </div>
@@ -13589,7 +13587,7 @@ AABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[43]:</div>
+<div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -13646,19 +13644,18 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Oldest user who has exactly 2 likes</span>
 <span class="n">agg_values</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">m</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">])</span>
-        <span class="o">.</span><span class="n">count</span><span class="p">()</span>
-        <span class="o">.</span><span class="n">likes</span>
-        <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-        <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">users_likes_join</span>
+        <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;user_id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">agg</span><span class="p">({</span> <span class="s1">&#39;likes&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span> <span class="p">})</span>
+        <span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span> <span class="n">sort_remaining</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="p">)</span>
 
-<span class="n">agg_values</span><span class="p">[</span><span class="n">agg_values</span><span class="p">[</span><span class="s1">&#39;likes&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="n">agg_values</span><span class="p">[</span><span class="n">agg_values</span><span class="p">[</span><span class="s1">&#39;likes&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13671,7 +13668,7 @@ AABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[44]:</div>
+<div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -13694,24 +13691,22 @@ AABJRU5ErkJggg==
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>0</th>
+      <th></th>
+      <th></th>
+      <th>likes</th>
+    </tr>
+    <tr>
+      <th>user_id</th>
+      <th>name</th>
+      <th>age</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>id</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>name</th>
-      <td>John</td>
-    </tr>
-    <tr>
-      <th>age</th>
-      <td>29</td>
-    </tr>
-    <tr>
-      <th>likes</th>
+      <th>1</th>
+      <th>John</th>
+      <th>29</th>
       <td>2</td>
     </tr>
   </tbody>
@@ -13725,13 +13720,24 @@ AABJRU5ErkJggg==
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the above we used <code>sort_index</code> instead of <code>sort_values</code> because the <code>groupby</code> operation creates a <code>MultiIndex</code>
+on columns <code>user_id</code>, <code>name</code> and <code>age</code> and since <code>age</code> is a part of an index <code>sort_values</code> cannot operate on it.</p>
+<p>The <code>head(n)</code> function on a <code>DataFrame</code> returns first <code>n</code> records from the frame and the equivalent function <code>tail(n)</code> returns last <code>n</code> records from the frame.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Oldest user who has at least 2 likes</span>
-<span class="n">agg_values</span><span class="p">[</span><span class="n">agg_values</span><span class="p">[</span><span class="s1">&#39;likes&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="n">agg_values</span><span class="p">[</span><span class="n">agg_values</span><span class="p">[</span><span class="s1">&#39;likes&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13744,7 +13750,7 @@ AABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[45]:</div>
+<div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -13767,24 +13773,22 @@ AABJRU5ErkJggg==
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>2</th>
+      <th></th>
+      <th></th>
+      <th>likes</th>
+    </tr>
+    <tr>
+      <th>user_id</th>
+      <th>name</th>
+      <th>age</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>id</th>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>name</th>
-      <td>Alex</td>
-    </tr>
-    <tr>
-      <th>age</th>
-      <td>32</td>
-    </tr>
-    <tr>
-      <th>likes</th>
+      <th>3</th>
+      <th>Alex</th>
+      <th>32</th>
       <td>3</td>
     </tr>
   </tbody>
@@ -13800,11 +13804,11 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Lets augment our data a little more</span>
-<span class="n">users</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="p">[</span>
+<span class="n">users</span> <span class="o">=</span> <span class="n">users</span> <span class="o">+</span> <span class="p">[</span>
     <span class="p">{</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Yeti&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">40</span> <span class="p">},</span>
     <span class="p">{</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Commander&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">31</span> <span class="p">},</span>
     <span class="p">{</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Jonnah&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">26</span> <span class="p">},</span>
@@ -13834,7 +13838,7 @@ AABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[46]:</div>
+<div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -13871,10 +13875,10 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">likes</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="p">[</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">likes</span> <span class="o">=</span> <span class="n">likes</span> <span class="o">+</span> <span class="p">[</span>
     <span class="p">{</span> <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span> <span class="s1">&#39;likes&#39;</span><span class="p">:</span> <span class="s1">&#39;Mango&#39;</span> <span class="p">},</span>
     <span class="p">{</span> <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span> <span class="s1">&#39;likes&#39;</span><span class="p">:</span> <span class="s1">&#39;Orange&#39;</span><span class="p">},</span>
     <span class="p">{</span> <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s1">&#39;likes&#39;</span><span class="p">:</span> <span class="s1">&#39;Burger&#39;</span><span class="p">},</span>
@@ -13929,7 +13933,7 @@ AABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[47]:</div>
+<div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -14005,288 +14009,15 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DataFrames from native python dictionaries</span>
 <span class="n">df_users</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">users</span><span class="p">)</span>
 <span class="n">df_likes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">likes</span><span class="p">)</span>
-
-<span class="c1"># A user-likes wise group tells you the story</span>
-<span class="n">merge</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_users</span><span class="p">,</span> <span class="n">df_likes</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;user_id&#39;</span><span class="p">)</span>
-<span class="n">merge</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
-
-<span class="c1"># We aggregate the likes column and rename it to `Records`</span>
-<span class="n">user_likes_group</span> <span class="o">=</span> <span class="n">merge</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;likes&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">likes</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;count&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span> <span class="s1">&#39;count&#39;</span><span class="p">:</span> <span class="s1">&#39;Records&#39;</span> <span class="p">})</span>
-<span class="n">user_likes_group</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[48]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th></th>
-      <th>count</th>
-    </tr>
-    <tr>
-      <th>id</th>
-      <th>name</th>
-      <th>likes</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="3" valign="top">1</th>
-      <th rowspan="3" valign="top">John</th>
-      <th>Coconut</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Mango</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Pepsi</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">2</th>
-      <th rowspan="3" valign="top">Doe</th>
-      <th>Burger</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Mango</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Pepsi</th>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">3</th>
-      <th rowspan="3" valign="top">Alex</th>
-      <th>Carrot</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Coconut</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Cola</th>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th rowspan="4" valign="top">4</th>
-      <th rowspan="4" valign="top">Rahul</th>
-      <th>Burger</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Mango</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Orange</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Pepsi</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">6</th>
-      <th rowspan="3" valign="top">Shristy</th>
-      <th>Cola</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Mango</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Pepsi</th>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">7</th>
-      <th rowspan="2" valign="top">Yeti</th>
-      <th>Cola</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Soda</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <th>Commander</th>
-      <th>Cola</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">9</th>
-      <th rowspan="2" valign="top">Jonnah</th>
-      <th>Pepsi</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Soda</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <th>Hex</th>
-      <th>Blueberry</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">11</th>
-      <th rowspan="2" valign="top">Sam</th>
-      <th>Burger</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Mango</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">12</th>
-      <th rowspan="2" valign="top">Madan</th>
-      <th>Burger</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Soda</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">13</th>
-      <th rowspan="2" valign="top">Harry</th>
-      <th>Cola</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Mango</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th rowspan="4" valign="top">14</th>
-      <th rowspan="4" valign="top">Tom</th>
-      <th>Coconut</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Orange</th>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>Pepsi</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Soda</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">15</th>
-      <th rowspan="2" valign="top">Daniel</th>
-      <th>Blueberry</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Carrot</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <th>Virat</th>
-      <th>Orange</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <th>Nathan</th>
-      <th>Mango</th>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">18</th>
-      <th rowspan="3" valign="top">Stepheny</th>
-      <th>Blueberry</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Burger</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Carrot</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">19</th>
-      <th rowspan="3" valign="top">Lola</th>
-      <th>Blueberry</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Coconut</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Cola</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">20</th>
-      <th rowspan="2" valign="top">Amy</th>
-      <th>Cola</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Soda</th>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -14295,19 +14026,25 @@ AABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Look at the first two rows in the third columns, the renaming has created a hierarchial index.
-Let us flatten the index</p>
+<p>Lets figure out where are the duplicates</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reset the index to generate a completely flat table</span>
-<span class="n">user_likes_group</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_duplicate_likes</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df_likes</span>
+        <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;user_id&#39;</span><span class="p">,</span> <span class="s1">&#39;likes&#39;</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">agg</span><span class="p">({</span> <span class="s1">&#39;likes&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span> <span class="p">})</span>
+        
+<span class="p">)</span>
+
+<span class="n">duplicate_likes</span> <span class="o">=</span> <span class="n">_duplicate_likes</span><span class="p">[</span><span class="n">_duplicate_likes</span><span class="p">[</span><span class="s1">&#39;likes&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">duplicate_likes</span>
 </pre></div>
 
 </div>
@@ -14320,7 +14057,7 @@ Let us flatten the index</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[49]:</div>
+<div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -14343,423 +14080,39 @@ Let us flatten the index</p>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>id</th>
-      <th>name</th>
+      <th></th>
       <th>likes</th>
-      <th>count</th>
+    </tr>
+    <tr>
+      <th>user_id</th>
+      <th>likes</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>John</td>
-      <td>Coconut</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>John</td>
-      <td>Mango</td>
-      <td>1</td>
-    </tr>
-    <tr>
       <th>2</th>
-      <td>1</td>
-      <td>John</td>
-      <td>Pepsi</td>
-      <td>1</td>
+      <th>Pepsi</th>
+      <td>2</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>2</td>
-      <td>Doe</td>
-      <td>Burger</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2</td>
-      <td>Doe</td>
-      <td>Mango</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>2</td>
-      <td>Doe</td>
-      <td>Pepsi</td>
-      <td>2</td>
+      <th>Cola</th>
+      <td>3</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>3</td>
-      <td>Alex</td>
-      <td>Carrot</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>3</td>
-      <td>Alex</td>
-      <td>Coconut</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>3</td>
-      <td>Alex</td>
-      <td>Cola</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>4</td>
-      <td>Rahul</td>
-      <td>Burger</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>4</td>
-      <td>Rahul</td>
-      <td>Mango</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>4</td>
-      <td>Rahul</td>
-      <td>Orange</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>4</td>
-      <td>Rahul</td>
-      <td>Pepsi</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>6</td>
-      <td>Shristy</td>
-      <td>Cola</td>
-      <td>1</td>
+      <th>Pepsi</th>
+      <td>2</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>6</td>
-      <td>Shristy</td>
-      <td>Mango</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>6</td>
-      <td>Shristy</td>
-      <td>Pepsi</td>
+      <th>Orange</th>
       <td>2</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>7</td>
-      <td>Yeti</td>
-      <td>Cola</td>
-      <td>1</td>
     </tr>
     <tr>
       <th>17</th>
-      <td>7</td>
-      <td>Yeti</td>
-      <td>Soda</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>8</td>
-      <td>Commander</td>
-      <td>Cola</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>9</td>
-      <td>Jonnah</td>
-      <td>Pepsi</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>9</td>
-      <td>Jonnah</td>
-      <td>Soda</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>10</td>
-      <td>Hex</td>
-      <td>Blueberry</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>11</td>
-      <td>Sam</td>
-      <td>Burger</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>11</td>
-      <td>Sam</td>
-      <td>Mango</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>12</td>
-      <td>Madan</td>
-      <td>Burger</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>12</td>
-      <td>Madan</td>
-      <td>Soda</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>13</td>
-      <td>Harry</td>
-      <td>Cola</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>13</td>
-      <td>Harry</td>
-      <td>Mango</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>14</td>
-      <td>Tom</td>
-      <td>Coconut</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>14</td>
-      <td>Tom</td>
-      <td>Orange</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>14</td>
-      <td>Tom</td>
-      <td>Pepsi</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>14</td>
-      <td>Tom</td>
-      <td>Soda</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>15</td>
-      <td>Daniel</td>
-      <td>Blueberry</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>33</th>
-      <td>15</td>
-      <td>Daniel</td>
-      <td>Carrot</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td>16</td>
-      <td>Virat</td>
-      <td>Orange</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>35</th>
-      <td>17</td>
-      <td>Nathan</td>
-      <td>Mango</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>36</th>
-      <td>18</td>
-      <td>Stepheny</td>
-      <td>Blueberry</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>37</th>
-      <td>18</td>
-      <td>Stepheny</td>
-      <td>Burger</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>18</td>
-      <td>Stepheny</td>
-      <td>Carrot</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>19</td>
-      <td>Lola</td>
-      <td>Blueberry</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>40</th>
-      <td>19</td>
-      <td>Lola</td>
-      <td>Coconut</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>41</th>
-      <td>19</td>
-      <td>Lola</td>
-      <td>Cola</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>20</td>
-      <td>Amy</td>
-      <td>Cola</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>20</td>
-      <td>Amy</td>
-      <td>Soda</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Even after flattening the index, there is too much "noise" in the above data. We do not care about when a user likes a product which dominates this list. Also the data tells us nothing about the rows we need to edit. It tells us that Nathan likes Mango is recorded twice but does not tell us which rows to edit to rectify the same.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Let us first remove records representing singlular likes</span>
-<span class="n">user_likes_group</span><span class="p">[</span><span class="n">user_likes_group</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[50]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>name</th>
-      <th>likes</th>
-      <th>count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2</td>
-      <td>Doe</td>
-      <td>Pepsi</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>3</td>
-      <td>Alex</td>
-      <td>Cola</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>6</td>
-      <td>Shristy</td>
-      <td>Pepsi</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>14</td>
-      <td>Tom</td>
-      <td>Orange</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>17</td>
-      <td>Nathan</td>
-      <td>Mango</td>
+      <th>Mango</th>
       <td>2</td>
     </tr>
   </tbody>
@@ -14777,14 +14130,14 @@ Let us flatten the index</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>So there are in all 6 duplicate records. Doe-Pepsi is recorded twice so that is 1 extra, 2 extra for Alex-Cola and 1 extra for rest of the three pairs, which equals, 1 + 2 + 1 + 1 + 1 = 6.</p>
+<p>So there are in all 6 duplicate records. User#2 and Pepsi is recorded twice so that is 1 extra, 2 extra for User#3 and Cola and 1 extra for rest of the three pairs, which equals, 1 + 2 + 1 + 1 + 1 = 6.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Now remove the duplicates</span>
@@ -14804,7 +14157,7 @@ Let us flatten the index</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[51]:</div>
+<div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -14830,21 +14183,23 @@ Let us flatten the index</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Join the datasets</span>
-<span class="n">merge</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_users</span><span class="p">,</span> <span class="n">df_unq_likes</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;user_id&#39;</span><span class="p">)</span>
-<span class="n">merge</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+<span class="n">users_likes_join</span> <span class="o">=</span> <span class="n">df_users</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_unq_likes</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;user_id&#39;</span><span class="p">)</span>
+<span class="n">users_likes_join</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
 
 <span class="c1"># We aggregate the likes column and rename it to `Records`</span>
-<span class="n">unq_user_likes_group</span> <span class="o">=</span> <span class="n">merge</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;likes&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">likes</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;count&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span> <span class="s1">&#39;count&#39;</span><span class="p">:</span> <span class="s1">&#39;Records&#39;</span> <span class="p">})</span>
-
-<span class="c1"># Reset the index to generate a completely flat table</span>
-<span class="n">unq_user_likes_group</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">unq_user_likes_group</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">users_likes_join</span>
+        <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;likes&#39;</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;likes&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">})</span>
+        <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span> <span class="s1">&#39;likes&#39;</span><span class="p">:</span> <span class="s1">&#39;num_likes&#39;</span> <span class="p">})</span>
+<span class="p">)</span>
 
 <span class="c1"># Should return empty if duplicates are removed</span>
-<span class="n">unq_user_likes_group</span><span class="p">[</span><span class="n">unq_user_likes_group</span><span class="p">[</span><span class="s1">&#39;Records&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">unq_user_likes_group</span><span class="p">[</span><span class="n">unq_user_likes_group</span><span class="p">[</span><span class="s1">&#39;num_likes&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -14857,7 +14212,7 @@ Let us flatten the index</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[52]:</div>
+<div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -14880,10 +14235,15 @@ Let us flatten the index</p>
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th></th>
+      <th></th>
+      <th>num_likes</th>
+    </tr>
+    <tr>
       <th>id</th>
       <th>name</th>
       <th>likes</th>
-      <th>Records</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -14909,16 +14269,18 @@ Let us flatten the index</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># What percent of audience likes Mango?</span>
-<span class="n">mango_like_count</span> <span class="o">=</span> <span class="n">merge</span><span class="p">[</span><span class="n">merge</span><span class="p">[</span><span class="s1">&#39;likes&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Mango&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;likes&#39;</span><span class="p">])[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
-<span class="n">percent</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">mango_like_count</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_users</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># What percent of audience likes each fruit?</span>
+<span class="n">likes_count</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">users_likes_join</span>
+        <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;likes&#39;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">agg</span><span class="p">({</span> <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span> <span class="p">})</span>
+<span class="p">)</span>
 
-<span class="n">df_mango_like</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span> <span class="p">[</span><span class="s1">&#39;Likes&#39;</span><span class="p">,</span> <span class="n">percent</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Do not like&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="n">percent</span><span class="p">]</span> <span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Status&#39;</span><span class="p">,</span> <span class="s1">&#39;Percent&#39;</span><span class="p">])</span>
-<span class="c1"># df_mango_like.plot.pie(subplots=True)</span>
-<span class="n">df_mango_like</span>
+<span class="n">likes_count</span><span class="p">[</span><span class="s1">&#39;percent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">likes_count</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_users</span><span class="p">)</span>
+<span class="n">likes_count</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;percent&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -14931,7 +14293,7 @@ Let us flatten the index</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[53]:</div>
+<div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -14954,20 +14316,60 @@ Let us flatten the index</p>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>0</th>
-      <th>1</th>
+      <th>user_id</th>
+      <th>percent</th>
+    </tr>
+    <tr>
+      <th>likes</th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>Status</th>
-      <td>Likes</td>
-      <td>0.35</td>
+      <th>Cola</th>
+      <td>7</td>
+      <td>35.0</td>
     </tr>
     <tr>
-      <th>Percent</th>
-      <td>Do not like</td>
-      <td>0.65</td>
+      <th>Mango</th>
+      <td>7</td>
+      <td>35.0</td>
+    </tr>
+    <tr>
+      <th>Pepsi</th>
+      <td>6</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <th>Burger</th>
+      <td>5</td>
+      <td>25.0</td>
+    </tr>
+    <tr>
+      <th>Soda</th>
+      <td>5</td>
+      <td>25.0</td>
+    </tr>
+    <tr>
+      <th>Blueberry</th>
+      <td>4</td>
+      <td>20.0</td>
+    </tr>
+    <tr>
+      <th>Coconut</th>
+      <td>4</td>
+      <td>20.0</td>
+    </tr>
+    <tr>
+      <th>Carrot</th>
+      <td>3</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <th>Orange</th>
+      <td>3</td>
+      <td>15.0</td>
     </tr>
   </tbody>
 </table>
@@ -14979,6 +14381,15 @@ Let us flatten the index</p>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the above code snippet we created a computed columns <code>percent</code> to <code>likes_count</code> frame. Column operations in pandas are vectorized and execute significantly faster than row wise operations. Always a good idea to express computations in</p>
+
+</div>
+</div>
 </div>
     </div>
   </div>
