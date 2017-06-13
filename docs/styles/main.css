@@ -76,6 +76,8 @@ h1 {
 
 ul {
   list-style-type: none; }
+  ul li {
+    margin-bottom: 2.4rem; }
 
 .meta {
   opacity: 0.8;
